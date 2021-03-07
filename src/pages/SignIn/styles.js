@@ -90,4 +90,7 @@ export const Button = styled.button`
     cursor: pointer;
     box-shadow: 0px 1px 4px #888;
   }
+  &:active {
+    box-shadow: 0px 1px 8px #888;
+  }
 `;

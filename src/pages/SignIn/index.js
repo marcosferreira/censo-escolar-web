@@ -11,12 +11,12 @@ export default function SignIn() {
       <form>
         <img src={logo} alt="logo" />
         <fieldset>
-          <Input type="text" name="cpf" id="cpf" required />
-          <Label for="cpf">CPF</Label>
+          <Input type="text" name="cpf" required />
+          <Label>CPF</Label>
         </fieldset>
         <fieldset>
-          <Input type="password" name="password" id="password" required  />
-          <Label for="password">SENHA</Label>
+          <Input type="password" name="password" required  />
+          <Label>SENHA</Label>
         </fieldset>
         <Button>Entrar</Button>
       </form>
