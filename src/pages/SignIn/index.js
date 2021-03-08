@@ -1,8 +1,9 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
+import React from "react";
+import { useHistory } from "react-router-dom";
 
-import { Button, Container, Input, Label } from './styles';
-import logo from '../../assets/logo.png';
+import { Form, InputLabel, Button } from "../../components/Form";
+import { Container} from "./styles";
+import logo from "../../assets/logo.png";
 
 export default function SignIn() {
   const history = useHistory();
@@ -10,23 +11,17 @@ export default function SignIn() {
   const onSubmit = (event) => {
     event.preventDefault();
 
-    history.push('/home');
-  }
+    history.push("/home");
+  };
 
   return (
     <Container>
-      <form onSubmit={onSubmit}>
+      <Form onSubmit={onSubmit}>
         <img src={logo} alt="logo" />
-        <fieldset>
-          <Input type="text" name="cpf" required />
-          <Label>CPF</Label>
-        </fieldset>
-        <fieldset>
-          <Input type="password" name="password" required  />
-          <Label>SENHA</Label>
-        </fieldset>
+        <InputLabel type="text" name="cpf" label="CPF" required="true" />
+        <InputLabel type="password" name="password" label="SENHA" required="true" />
         <Button>Entrar</Button>
-      </form>
+      </Form>
     </Container>
   );
 }
