@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import { Form, InputLabel, Button } from "../../components/Form";
 import { Container} from "./styles";
@@ -21,6 +21,7 @@ export default function SignIn() {
         <InputLabel type="text" name="cpf" label="CPF" required="true" />
         <InputLabel type="password" name="password" label="SENHA" required="true" />
         <Button>Entrar</Button>
+        <Link to="/signup">CADASTRAR</Link>
       </Form>
     </Container>
   );

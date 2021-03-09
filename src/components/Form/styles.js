@@ -65,10 +65,11 @@ export const Label = styled.label`
 `;
 
 export const Button = styled.button`
+  min-width: 150px;
   margin-top: 10px;
   padding: 12px 15px;
   border: none;
-  background-color: #FFF;
+  background-color: #fff;
   text-transform: uppercase;
   box-shadow: 0px 1px 2px #999;
   transition: 0.4s ease all;
