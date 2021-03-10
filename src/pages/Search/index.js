@@ -10,7 +10,7 @@ export default function Home() {
 
       <form>
         <fieldset>
-          <input type="text" name="search" placeholder="Digite para pesquisar" />
+          <input type="text" name="search" placeholder="Digite para pesquisar" required />
           <button><AiOutlineSearch size={26} /></button>
         </fieldset>
       </form>
