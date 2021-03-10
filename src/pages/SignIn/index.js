@@ -14,6 +14,7 @@ export default function SignIn() {
   const [{ values, loading }, handleChange, handleSubmit] = useForm();
 
   const onSubmit = (event) => {
+    console.log(values);
     history.push("/home");
   };
 
