@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
@@ -8,17 +8,19 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   gap: 50px;
-`;
 
-export const PanelButton = styled.div`
-  width: 150px;
-  height: 150px;
-  margin-top: 100px;
-  padding: 20px;
-  background-color: #2C5FB0;
-  color: #FFF;
+  a {
+    width: 150px;
+    height: 150px;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #2c5fb0;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 `;
