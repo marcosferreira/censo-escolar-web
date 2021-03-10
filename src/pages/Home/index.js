@@ -9,10 +9,10 @@ import { FiUsers } from "react-icons/fi";
 import { Container } from "./styles";
 import { Link } from "react-router-dom";
 
-export default function Home() {
+export default function Search() {
   return (
     <Container>
-      <Link>
+      <Link to="/search">
         <p>
           <AiOutlineSearch size={40} />
         </p>
