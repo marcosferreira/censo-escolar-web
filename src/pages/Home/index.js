@@ -1,13 +1,10 @@
-import React from "react";
-import { AiOutlineSearch } from "react-icons/ai";
-import {
-  HiOutlineClipboardList,
-  HiOutlineDocumentReport,
-} from "react-icons/hi";
-import { FiUsers } from "react-icons/fi";
+import React from 'react';
+import { AiOutlineSearch } from 'react-icons/ai';
+import { HiOutlineClipboardList, HiOutlineDocumentReport } from 'react-icons/hi';
+import { FiUsers } from 'react-icons/fi';
 
-import { Container } from "./styles";
-import { Link } from "react-router-dom";
+import { Container } from './styles';
+import { Link } from 'react-router-dom';
 
 export default function Search() {
   return (
