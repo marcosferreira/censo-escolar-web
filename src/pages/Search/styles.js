@@ -8,10 +8,11 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 20px;
 
   h1 {
     margin-top: 80px;
+    margin-bottom: 50px;
   }
 
   form {
@@ -35,9 +36,11 @@ export const Container = styled.div`
         background-color: #224A8A;
         color: #FFF;
         font-size: 14px;
+        text-transform: uppercase;
 
         &::placeholder {
           color: #3C81F0;
+          text-transform: capitalize;
         }
       }
 
@@ -59,14 +62,29 @@ export const Container = styled.div`
   }
 `;
 
+export const PanelResult = styled.div`
+  width: 100%;
+  max-width: 600px;
+  display: ${props => props.visibility};
+`;
+
 export const CardPerson = styled.div`
   width: 100%;
   max-width: 600px;
-  height: 200px;
-  background-color: #224A8A;
-  border-radius: 4px;
+  height: 150px;
+  margin: 20px 0;
   padding: 20px;
-  margin-bottom: 20px;
+  border-radius: 4px;
+  background-color: #224A8A;
 
-  display: ${props => props.visibility};
+  display: flex;
+  gap: 20px;
+`;
+
+export const CardBody = styled.div`
+  padding: 10px;
+
+  p {
+    margin-bottom: 5px;
+  }
 `;

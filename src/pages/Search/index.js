@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { AiOutlineSearch, AiOutlineUser } from 'react-icons/ai';
 
-import { Container, CardPerson } from './styles';
+import { Container, PanelResult, CardPerson, CardBody } from './styles';
 
 export default function Home() {
   const [visibility, setVisibility] = useState('none');
   const [query, setQuery] = useState('');
 
   useEffect(() => {
-    query ? setVisibility('block') : setVisibility('none')
+    query ? setVisibility('block') : setVisibility('none');
     console.log(query);
   }, [query]);
 
@@ -18,20 +18,33 @@ export default function Home() {
 
       <form>
         <fieldset>
-          <input type="text" name="query" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Digite para pesquisar" required />
+          <input
+            type="text"
+            name="query"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Digite para pesquisar"
+            required
+          />
           <button>
             <AiOutlineSearch size={26} />
           </button>
         </fieldset>
       </form>
 
-      <CardPerson visibility={visibility}>
-        <AiOutlineUser size={48} />
-      </CardPerson>
+      <PanelResult visibility={visibility}>
+        <CardPerson>
+          <AiOutlineUser size={60} />
+          <CardBody>
+            <p><b>NOME</b>: MARIA JOSE DA SILVA</p>
+            <p><b>ENDEREÇO</b>: SÍTIO COZINHA</p>
+          </CardBody>
+        </CardPerson>
 
-      <CardPerson visibility={visibility}>
-        <AiOutlineUser size={48} />
-      </CardPerson>
+        <CardPerson>
+          <AiOutlineUser size={60} />
+        </CardPerson>
+      </PanelResult>
     </Container>
   );
 }
