@@ -11,7 +11,7 @@ export const Container = styled.div`
   gap: 50px;
 
   h1 {
-    margin-top: 100px;
+    margin-top: 80px;
   }
 
   form {
@@ -57,19 +57,16 @@ export const Container = styled.div`
       }
     }
   }
+`;
 
-  a {
-    width: 150px;
-    height: 150px;
-    margin-top: 100px;
-    padding: 20px;
-    background-color: #2c5fb0;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
+export const CardPerson = styled.div`
+  width: 100%;
+  max-width: 600px;
+  height: 200px;
+  background-color: #224A8A;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 20px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+  display: ${props => props.visibility};
 `;
