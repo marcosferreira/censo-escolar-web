@@ -4,15 +4,18 @@ export const Container = styled.div`
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
 
+
   h1 {
     margin-top: 80px;
     margin-bottom: 50px;
+    transition: 0.4s all;
   }
 
   form {
@@ -60,12 +63,23 @@ export const Container = styled.div`
       }
     }
   }
+
+  ${props => props.visibility ? `
+    h1 {
+      margin-top: -70px;
+      transition: 0.4s all;
+    }
+    form {
+    transition: 0.4s all;
+  }
+  `: null}
 `;
 
 export const PanelResult = styled.div`
   width: 100%;
   max-width: 600px;
-  display: ${props => props.visibility};
+  transition: 0.4s all;
+  display: ${props => props.visibility ? `block` : `none`};
 `;
 
 export const CardPerson = styled.div`

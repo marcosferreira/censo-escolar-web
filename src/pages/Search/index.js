@@ -4,16 +4,16 @@ import { AiOutlineSearch, AiOutlineUser } from 'react-icons/ai';
 import { Container, PanelResult, CardPerson, CardBody } from './styles';
 
 export default function Home() {
-  const [visibility, setVisibility] = useState('none');
+  const [visibility, setVisibility] = useState(false);
   const [query, setQuery] = useState('');
 
   useEffect(() => {
-    query ? setVisibility('block') : setVisibility('none');
+    query ? setVisibility(true) : setVisibility(false);
     console.log(query);
   }, [query]);
 
   return (
-    <Container>
+    <Container visibility={visibility}>
       <h1>Procurar Cadastro</h1>
 
       <form>
