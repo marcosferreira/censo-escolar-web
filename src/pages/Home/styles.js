@@ -4,15 +4,16 @@ export const Container = styled.div`
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
+  padding-top: 100px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 20px;
 
   a {
     width: 150px;
     height: 150px;
-    margin-top: 100px;
     padding: 20px;
     background-color: #2c5fb0;
     color: #fff;
@@ -22,5 +23,13 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  @media(max-width: 320px) {
+    gap: 10px;
+  }
+
+  @media(min-width: 1024px) {
+    gap: 50px;
   }
 `;
