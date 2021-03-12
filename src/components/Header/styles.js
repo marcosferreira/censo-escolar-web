@@ -17,4 +17,16 @@ export const Container = styled.div`
   img {
     width: 200px;
   }
+
+  button {
+    padding: 10px;
+    border: none;
+    background-color: inherit;
+    z-index: 5;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
 `;

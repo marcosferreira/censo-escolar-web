@@ -19,6 +19,7 @@ function Routes() {
   return (
     <BrowserRouter>
     <Header />
+
     <Switch>
       <Route exact path="/" component={SignIn} />
       <Route exact path="/search" component={Search} />
