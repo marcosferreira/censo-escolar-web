@@ -6,7 +6,7 @@ import { FiUsers } from 'react-icons/fi';
 import { Container } from './styles';
 import { Link } from 'react-router-dom';
 
-export default function Search() {
+function Home() {
   return (
     <Container>
       <Link to="/search">
@@ -16,21 +16,21 @@ export default function Search() {
         <p>Procurar Cadastro</p>
       </Link>
 
-      <Link>
+      <Link to="/questionnaire">
         <p>
           <HiOutlineClipboardList size={40} />
         </p>
         <p>Iniciar Questionário</p>
       </Link>
 
-      <Link>
+      <Link to="/home">
         <p>
           <HiOutlineDocumentReport size={40} />
         </p>
         <p>Visualizar Relatório</p>
       </Link>
 
-      <Link>
+      <Link to="/home">
         <p>
           <FiUsers size={40} />
         </p>
@@ -39,3 +39,5 @@ export default function Search() {
     </Container>
   );
 }
+
+export default Home;

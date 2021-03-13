@@ -3,7 +3,7 @@ import { AiOutlineSearch, AiOutlineUser } from 'react-icons/ai';
 
 import { Container, PanelResult, CardPerson, CardBody } from './styles';
 
-export default function Home() {
+function Search() {
   const [visibility, setVisibility] = useState(false);
   const [query, setQuery] = useState('');
 
@@ -36,8 +36,12 @@ export default function Home() {
         <CardPerson>
           <AiOutlineUser size={60} />
           <CardBody>
-            <p><b>NOME</b>: MARIA JOSE DA SILVA</p>
-            <p><b>ENDEREÇO</b>: SÍTIO COZINHA</p>
+            <p>
+              <b>NOME</b>: MARIA JOSE DA SILVA
+            </p>
+            <p>
+              <b>ENDEREÇO</b>: SÍTIO COZINHA
+            </p>
           </CardBody>
         </CardPerson>
 
@@ -48,3 +52,5 @@ export default function Home() {
     </Container>
   );
 }
+
+export default Search;

@@ -5,11 +5,11 @@ import { useForm } from '../../hooks';
 import { Form, InputLabel, Button } from "../../components/Form";
 import { maskCPF } from '../../Utils';
 
-import logo from "../../assets/logo.png";
-
 import { Container} from "./styles";
 
-export default function SignIn() {
+import logo from "../../assets/logo.png";
+
+function SignIn() {
   const history = useHistory();
   const [{ values, loading }, handleChange, handleSubmit] = useForm();
 
@@ -24,7 +24,7 @@ export default function SignIn() {
 
   return (
     <Container>
-      <Form onSubmit={handleSubmit(onSubmit)}>
+      <Form onSubmit={handleSubmit(onSubmit)} maxWidth="400px">
         <img src={logo} alt="logo" />
         <InputLabel type="text" name="cpf" label="CPF" onKeyUp={handleMaskCPF} onChange={handleChange} required />
         <InputLabel type="password" name="password" label="SENHA" required />
@@ -34,3 +34,5 @@ export default function SignIn() {
     </Container>
   );
 }
+
+export default SignIn;

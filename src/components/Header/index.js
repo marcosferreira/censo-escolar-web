@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
-import { AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineMenu, AiOutlineClose, AiOutlineArrowLeft } from 'react-icons/ai';
 
 import Sidebar from '../Sidebar';
 
-import { Container } from './styles';
+import { Container, HeaderGroupButton } from './styles';
 import logo from '../../assets/logo.png';
 
 const useOutside = (ref, setIsMenuOpen) => {
@@ -13,7 +13,7 @@ const useOutside = (ref, setIsMenuOpen) => {
       if (ref.current && !ref.current.contains(event.target)) {
         setTimeout(() => setIsMenuOpen(false), 200);
       }
-    }
+    };
 
     // Bind the event listener
     document.addEventListener('mousedown', handleClickOutside);
@@ -21,21 +21,21 @@ const useOutside = (ref, setIsMenuOpen) => {
     return () => {
       // Unbind the event listener on clean up
       document.removeEventListener('mousedown', handleClickOutside);
-    }
+    };
   }, [ref, setIsMenuOpen]);
-}
+};
 
 export default function Header() {
   const [showSidebar, setShowSidebar] = useState(false);
   const wrapperRef = useRef(null);
   const location = useLocation();
-  // const history = useHistory();
+  const history = useHistory();
 
   useOutside(wrapperRef, setShowSidebar);
 
   const handleShowSidebar = () => {
     setShowSidebar(!showSidebar);
-  }
+  };
 
   return (
     <React.Fragment>
@@ -43,9 +43,17 @@ export default function Header() {
         <Container>
           <img src={logo} alt="logo" />
 
-          <button ref={wrapperRef} onClick={handleShowSidebar} >
-            <AiOutlineMenu size={26} />
-          </button>
+          <HeaderGroupButton>
+            {location.pathname !== '/home' ? (
+              <button onClick={() => history.goBack()}>
+                <AiOutlineArrowLeft size={26} />
+              </button>
+            ) : null}
+
+            <button ref={wrapperRef} onClick={handleShowSidebar}>
+              {showSidebar ? <AiOutlineClose size={26} /> : <AiOutlineMenu size={26} />}
+            </button>
+          </HeaderGroupButton>
 
           <Sidebar show={showSidebar} />
         </Container>

@@ -1,12 +1,20 @@
 import styled from "styled-components";
 
 export const Form = styled.form`
+  width: 100%;
+  max-width: ${ props => props.maxWidth || `900px`};
+
+  background-color: #FFF;
+  padding: 30px;
+  border-radius: 4px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   position: relative;
-  background-color: inherit;
+  color: #444;
 
   fieldset {
     width: 100%;
@@ -17,7 +25,7 @@ export const Form = styled.form`
 `;
 
 export const Input = styled.input`
-  width: 300px;
+  width: 100%;
   margin: 10px 0;
   padding: 15px;
   border: 1px solid #ccc;

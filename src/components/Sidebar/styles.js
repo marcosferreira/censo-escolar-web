@@ -10,7 +10,7 @@ export const Container = styled.div`
   position: fixed;
   z-index: 4;
   top: 0;
-  right: ${(props) => (props.show ? `0` : `-300px`)};
+  right: ${(props) => (props.show ? `0` : `-350px`)};
 
   ul {
     width: 100%;

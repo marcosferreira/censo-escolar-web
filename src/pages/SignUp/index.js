@@ -2,10 +2,12 @@ import React from "react";
 import { Link, useHistory } from "react-router-dom";
 
 import { Form, InputLabel, Button } from "../../components/Form";
+
 import { Container} from "./styles";
+
 import logo from "../../assets/logo.png";
 
-export default function SignUn() {
+function SignUn() {
   const history = useHistory();
 
   const onSubmit = (event) => {
@@ -28,3 +30,5 @@ export default function SignUn() {
     </Container>
   );
 }
+
+export default SignUn

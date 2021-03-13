@@ -1,9 +1,12 @@
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
-import Home from './Home';
-import Search from './Search';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
+
+import Home from './Home';
+import Search from './Search';
+import Questionnaire from './Questionnaire';
+
 import Header from '../components/Header';
 
 function PrivateRoute({ path, component }) {
@@ -22,9 +25,10 @@ function Routes() {
 
     <Switch>
       <Route exact path="/" component={SignIn} />
-      <Route exact path="/search" component={Search} />
       <Route exact path="/signup" component={SignUp} />
       <PrivateRoute exact path="/home" component={Home} />
+      <PrivateRoute exact path="/search" component={Search} />
+      <PrivateRoute exact path="/questionnaire" component={Questionnaire} />
     </Switch>
     </BrowserRouter>
   );
