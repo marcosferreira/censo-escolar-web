@@ -14,7 +14,7 @@ export const Form = styled.form`
   justify-content: center;
 
   position: relative;
-  color: #444;
+  color: #555;
 
   fieldset {
     width: 100%;

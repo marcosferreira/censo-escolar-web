@@ -17,4 +17,9 @@ export const Container = styled.div`
   h1, h2 {
     margin-bottom: 5px;
   }
+
+  button {
+    background-color: #89C12F;
+    color: #fff;
+  }
 `;
