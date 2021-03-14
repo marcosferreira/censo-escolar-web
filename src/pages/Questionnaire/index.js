@@ -9,7 +9,8 @@ function Questionnaire() {
 
   const next = () => {
     setCurrentStep(currentStep + 1);
-  }
+  };
+
 
   return (
     <Container>

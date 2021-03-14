@@ -18,3 +18,13 @@ export const Container = styled.div`
     margin-bottom: 5px;
   }
 `;
+
+export const ButtonGroup = styled.div`
+  display: flex;
+  gap: 20px;
+
+  @media(max-width: 425px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+`;

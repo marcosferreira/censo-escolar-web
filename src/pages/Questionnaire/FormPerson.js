@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 
 import { Form, InputLabel, Button } from '../../components/Form';
+import { ButtonGroup } from './styles';
 
 function FormPerson(props) {
   const [redirectForm, setRedirectForm] = useState(false);
@@ -14,14 +15,16 @@ function FormPerson(props) {
   const onSubmit = (event) => {
     event.preventDefault();
     event.target.reset();
-    props.next();
 
     console.log('enviado!!!');
+
     if (redirectForm) {
-      history.push('/home')
-      setRedirectForm(false)
+      history.push('/home');
+      setRedirectForm(false);
     }
-  }
+
+    props.next();
+  };
 
   return (
     <Form onSubmit={onSubmit}>
@@ -36,8 +39,15 @@ function FormPerson(props) {
       <InputLabel type="text" name="electrical_power_unit" label="Cód. Unidade Elétrica" required />
       <InputLabel type="text" name="number_of_residents" label="Quantidade de moradores" required />
 
-      <Button type="submit">Nova Pessoa</Button>
-      <Button type="submit" onClick={() => setRedirectForm(true)} color="#FFFFFF" backgroundColor="#01933E">Concluir</Button>
+      <ButtonGroup>
+        <Button type="submit">Salvar e Continuar</Button>
+        <Button type="submit" onClick={() => setRedirectForm(true)} color="#FFFFFF" backgroundColor="#01933E">
+          Salvar e Concluir
+        </Button>
+        <Button type="submit" onClick={() => history.push('/home')} color="#FFFFFF" backgroundColor="#2957A3">
+          Cancelar
+        </Button>
+      </ButtonGroup>
     </Form>
   );
 }
