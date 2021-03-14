@@ -13,7 +13,6 @@ export const Container = styled.div`
   justify-content: center;
 
   button {
-    background-color: #89C12F;
     color: #fff;
   }
 

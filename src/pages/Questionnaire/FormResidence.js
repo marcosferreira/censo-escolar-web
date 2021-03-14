@@ -1,8 +1,11 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import { Form, InputLabel, Button } from '../../components/Form';
 
 function FormResindece(props) {
+  const history = useHistory();
+
   if (props.currentStep !== 0) {
     return null;
   }
@@ -18,7 +21,7 @@ function FormResindece(props) {
       <h1>Questionário</h1>
       <h2>Domicílio</h2>
 
-      {console.log(`formulário ${props.currentStep}`)}
+      {/* {console.log(`exibindo formulário ${props.currentStep}`)} */}
 
       <InputLabel type="text" name="district" label="Bairro/Localidade" required />
       <InputLabel type="text" name="address" label="Rua/Logradouro" required />
@@ -26,8 +29,8 @@ function FormResindece(props) {
       <InputLabel type="text" name="electrical_power_unit" label="Cód. Unidade Elétrica" required />
       <InputLabel type="text" name="number_of_residents" label="Quantidade de moradores" required />
 
-      <Button>Continuar</Button>
-      <Button>Cancelar</Button>
+      <Button type="submit">Continuar</Button>
+      <Button type="button" onClick={() => history.push('/home')} color="#FFFFFF" backgroundColor="#01933E">Cancelar</Button>
     </Form>
   );
 }

@@ -17,7 +17,7 @@ function SignUn() {
 
   return (
     <Container>
-      <Form onSubmit={onSubmit}>
+      <Form onSubmit={onSubmit}  maxWidth="400px">
         <img src={logo} alt="logo" />
         <InputLabel type="text" name="firstname" label="NOME" required="true" />
         <InputLabel type="text" name="lastname" label="SOBRENOME" required="true" />

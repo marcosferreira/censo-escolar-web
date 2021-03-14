@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router';
 
 import { Form, InputLabel, Button } from '../../components/Form';
 
 function FormPerson(props) {
+  const [redirectForm, setRedirectForm] = useState(false);
+  const history = useHistory();
+
   if (props.currentStep === 0) {
     return null;
   }
@@ -11,6 +15,12 @@ function FormPerson(props) {
     event.preventDefault();
     event.target.reset();
     props.next();
+
+    console.log('enviado!!!');
+    if (redirectForm) {
+      history.push('/home')
+      setRedirectForm(false)
+    }
   }
 
   return (
@@ -18,7 +28,7 @@ function FormPerson(props) {
       <h1>Questionário</h1>
       <h2>Pessoa {props.currentStep}</h2>
 
-      {console.log(`formulário ${props.currentStep}`)}
+      {/* {console.log(`exibindo formulário ${props.currentStep}`)} */}
 
       <InputLabel type="text" name="district" label="Bairro/Localidade" required />
       <InputLabel type="text" name="address" label="Rua/Logradouro" required />
@@ -26,8 +36,8 @@ function FormPerson(props) {
       <InputLabel type="text" name="electrical_power_unit" label="Cód. Unidade Elétrica" required />
       <InputLabel type="text" name="number_of_residents" label="Quantidade de moradores" required />
 
-      <Button>Continuar</Button>
-      <Button>Concluir</Button>
+      <Button type="submit">Nova Pessoa</Button>
+      <Button type="submit" onClick={() => setRedirectForm(true)} color="#FFFFFF" backgroundColor="#01933E">Concluir</Button>
     </Form>
   );
 }

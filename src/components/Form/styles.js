@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Form = styled.form`
   width: 100%;
-  max-width: ${ props => props.maxWidth || `900px`};
+  max-width: ${(props) => props.maxWidth || `900px`};
 
-  background-color: #FFF;
+  background-color: #fff;
   padding: 30px;
   border-radius: 4px;
 
@@ -77,7 +77,9 @@ export const Button = styled.button`
   margin-top: 10px;
   padding: 12px 15px;
   border: none;
-  background-color: #fff;
+  background-color: ${(props) => props.backgroundColor || `#89C12F`};
+  color: ${(props) => props.color || `#FFF`};
+
   text-transform: uppercase;
   box-shadow: 0px 1px 2px #999;
   transition: 0.4s ease all;
