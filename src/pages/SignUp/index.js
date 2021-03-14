@@ -12,7 +12,6 @@ function SignUn() {
 
   const onSubmit = (event) => {
     event.preventDefault();
-
     history.push("/home");
   };
 
