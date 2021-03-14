@@ -33,7 +33,7 @@ function FormPerson(props) {
 
       {/* {console.log(`exibindo formulário ${props.currentStep}`)} */}
 
-      <InputLabel type="text" name="district" label="Bairro/Localidade" required />
+      <InputLabel type="text" name="district" label="Bairro/Localidade" autoFocus required />
       <InputLabel type="text" name="address" label="Rua/Logradouro" required />
       <InputLabel type="text" name="home_num" label="Nº da Residência" required />
       <InputLabel type="text" name="electrical_power_unit" label="Cód. Unidade Elétrica" required />
@@ -44,7 +44,7 @@ function FormPerson(props) {
         <Button type="submit" onClick={() => setRedirectForm(true)} color="#FFFFFF" backgroundColor="#01933E">
           Salvar e Concluir
         </Button>
-        <Button type="submit" onClick={() => history.push('/home')} color="#FFFFFF" backgroundColor="#2957A3">
+        <Button type="submit" onClick={() => history.push('/home')} color="#FFFFFF" backgroundColor="#F44">
           Cancelar
         </Button>
       </ButtonGroup>

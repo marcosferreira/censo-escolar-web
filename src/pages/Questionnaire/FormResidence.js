@@ -25,7 +25,7 @@ function FormResindece(props) {
       <h1>Questionário</h1>
       <h2>Domicílio</h2>
       {/* {console.log(`exibindo formulário ${props.currentStep}`)} */}
-      <InputLabel type="text" name="district" label="Bairro/Localidade" required />
+      <InputLabel type="text" name="district" label="Bairro/Localidade" autoFocus required />
       <InputLabel type="text" name="address" label="Rua/Logradouro" required />
       <InputLabel type="text" name="home_num" label="Nº da Residência" required />
       <InputLabel type="text" name="electrical_power_unit" label="Cód. Unidade Elétrica" required />
