@@ -32,7 +32,7 @@ function FormResindece(props) {
       <InputLabel type="text" name="number_of_residents" label="Quantidade de moradores" required />
       <ButtonGroup>
         <Button type="submit">Continuar</Button>
-        <Button type="button" onClick={() => history.push('/home')} color="#FFFFFF" backgroundColor="#01933E">
+        <Button type="button" onClick={() => history.push('/home')} >
           Cancelar
         </Button>
       </ButtonGroup>{' '}

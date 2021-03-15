@@ -41,10 +41,10 @@ function FormPerson(props) {
 
       <ButtonGroup>
         <Button type="submit">Salvar e Continuar</Button>
-        <Button type="submit" onClick={() => setRedirectForm(true)} color="#FFFFFF" backgroundColor="#01933E">
+        <Button type="submit" onClick={() => setRedirectForm(true)}>
           Salvar e Concluir
         </Button>
-        <Button type="submit" onClick={() => history.push('/home')} color="#FFFFFF" backgroundColor="#F44">
+        <Button type="submit" onClick={() => history.push('/home')}>
           Cancelar
         </Button>
       </ButtonGroup>

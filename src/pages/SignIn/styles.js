@@ -12,10 +12,6 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  button {
-    color: #fff;
-  }
-
   a {
     min-width: 150px;
     margin-top: 10px;

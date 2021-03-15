@@ -16,7 +16,7 @@ function Home() {
         <p>Procurar Cadastro</p>
       </Link>
 
-      <Link to="/questionnaire">
+      <Link to="/survey">
         <p>
           <HiOutlineClipboardList size={40} />
         </p>

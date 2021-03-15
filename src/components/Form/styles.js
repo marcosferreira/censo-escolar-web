@@ -75,9 +75,9 @@ export const Button = styled.button`
   min-width: 150px;
   margin-top: 10px;
   padding: 12px 15px;
-  border: none;
-  background-color: ${(props) => props.backgroundColor || `#89C12F`};
-  color: ${(props) => props.color || `#FFF`};
+  border: 1px solid ${(props) => props.backgroundColor || `#BBB`};
+  background-color: ${(props) => props.backgroundColor || `inherit`};
+  color: ${(props) => props.color || `#777`};
 
   text-transform: uppercase;
   box-shadow: 0px 1px 2px #999;
@@ -86,6 +86,9 @@ export const Button = styled.button`
   &:hover {
     cursor: pointer;
     box-shadow: 0px 1px 4px #888;
+    border: 1px solid #2957A3;
+    background: ${props => props.backgroundColorHover || `#2957A3`};
+    color: ${(props) => props.color || `#FFF`};
   }
   &:active {
     box-shadow: 0px 1px 8px #888;

@@ -28,8 +28,8 @@ function SignIn() {
         <img src={logo} alt="logo" />
         <InputLabel type="text" name="cpf" label="CPF" onKeyUp={handleMaskCPF} onChange={handleChange} required />
         <InputLabel type="password" name="password" label="SENHA" required />
-        <Button>{loading ? 'Entrando...' : 'ENTRAR'}</Button>
-        <Link to="/signup">CADASTRAR</Link>
+        <Button backgroundColor="#80C125" color="#FFF">{loading ? 'Entrando...' : 'ENTRAR'}</Button>
+        <Link to="/signup">Inscrever-se</Link>
       </Form>
     </Container>
   );

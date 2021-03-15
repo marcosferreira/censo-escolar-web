@@ -5,7 +5,7 @@ import SignUp from './SignUp';
 
 import Home from './Home';
 import Search from './Search';
-import Questionnaire from './Questionnaire';
+import Survey from './Survey';
 
 import Header from '../components/Header';
 
@@ -28,7 +28,7 @@ function Routes() {
       <Route exact path="/signup" component={SignUp} />
       <PrivateRoute exact path="/home" component={Home} />
       <PrivateRoute exact path="/search" component={Search} />
-      <PrivateRoute exact path="/questionnaire" component={Questionnaire} />
+      <PrivateRoute exact path="/survey" component={Survey} />
     </Switch>
     </BrowserRouter>
   );

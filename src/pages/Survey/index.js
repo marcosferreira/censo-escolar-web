@@ -4,7 +4,7 @@ import FormPerson from './FormPerson';
 
 import { Container } from './styles';
 
-function Questionnaire() {
+function Survey() {
   const [currentStep, setCurrentStep] = useState(0);
 
   const next = () => {
@@ -20,4 +20,4 @@ function Questionnaire() {
   );
 }
 
-export default Questionnaire;
+export default Survey;

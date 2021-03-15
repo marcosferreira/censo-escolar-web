@@ -23,8 +23,8 @@ function SignUn() {
         <InputLabel type="text" name="lastname" label="SOBRENOME" required="true" />
         <InputLabel type="text" name="cpf" label="CPF" required="true" />
         <InputLabel type="password" name="password" label="SENHA" required="true" />
-        <Button>Cadastrar</Button>
-        <Link to="/">Entrar</Link>
+        <Button backgroundColor="#80C125" color="#FFF">Cadastrar</Button>
+        <Link to="/">Login</Link>
       </Form>
     </Container>
   );
