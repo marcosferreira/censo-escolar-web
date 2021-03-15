@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import React, { useCallback, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Form, InputLabel, Button } from '../../components/Form';
 
@@ -8,9 +8,9 @@ import { Container } from './styles';
 import logo from '../../assets/logo.png';
 
 import { api } from '../../services/api';
+import { maskCPF } from '../../Utils';
 
 function SignUp() {
-  // const history = useHistory();
   const [inputData, setInputData] = useState({});
   const [message, setMessage] = useState('');
 
@@ -36,6 +36,10 @@ function SignUp() {
     event.preventDefault();
   };
 
+  const handleMaskCPF = useCallback((event) => {
+    maskCPF(event);
+  }, [])
+
   return (
     <Container>
       <Form onSubmit={onSubmit} maxWidth="400px">
@@ -43,7 +47,7 @@ function SignUp() {
         <p>{message}</p>
         <InputLabel type="text" name="firstname" label="NOME" required onChange={handleInput} />
         <InputLabel type="text" name="lastname" label="SOBRENOME" required onChange={handleInput} />
-        <InputLabel type="text" name="cpf" label="CPF" required onChange={handleInput} />
+        <InputLabel type="text" name="cpf" label="CPF" onKeyUp={handleMaskCPF} required onChange={handleInput} />
         <InputLabel type="password" name="password" label="SENHA" required onChange={handleInput} />
         <Button backgroundColor="#80C125" color="#FFF">
           Cadastrar

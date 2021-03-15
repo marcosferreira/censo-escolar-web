@@ -1,21 +1,38 @@
-import React, { useCallback } from "react";
-import { Link, useHistory } from "react-router-dom";
+import React, { useCallback, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 
 import { useForm } from '../../hooks';
-import { Form, InputLabel, Button } from "../../components/Form";
+import { Form, InputLabel, Button } from '../../components/Form';
 import { maskCPF } from '../../Utils';
 
-import { Container} from "./styles";
+import { Container } from './styles';
 
-import logo from "../../assets/logo.png";
+import logo from '../../assets/logo.png';
+import { api } from '../../services/api';
 
 function SignIn() {
   const history = useHistory();
   const [{ values, loading }, handleChange, handleSubmit] = useForm();
+  const [message, setMessage] = useState('');
 
   const onSubmit = () => {
-    console.log(values);
-    history.push("/home");
+    const options = {
+      method: 'POST',
+      headers: {
+        Accept: 'applications/json',
+        'Content-Type': 'application/json;charset=UTF-8',
+      },
+      body: JSON.stringify(values),
+    };
+
+    fetch(`${api}/login`, options)
+      .then((response) => {
+        if (response.ok) {
+          setTimeout(() => history.push('/home'), 1000)
+        }
+        return response.json();
+      })
+      .then((data) => setMessage(data.message))
   };
 
   const handleMaskCPF = useCallback((event) => {
@@ -26,9 +43,12 @@ function SignIn() {
     <Container>
       <Form onSubmit={handleSubmit(onSubmit)} maxWidth="400px">
         <img src={logo} alt="logo" />
+        {message}
         <InputLabel type="text" name="cpf" label="CPF" onKeyUp={handleMaskCPF} onChange={handleChange} required />
-        <InputLabel type="password" name="password" label="SENHA" required />
-        <Button backgroundColor="#80C125" color="#FFF">{loading ? 'Entrando...' : 'ENTRAR'}</Button>
+        <InputLabel type="password" name="password" onChange={handleChange} label="SENHA" required />
+        <Button backgroundColor="#80C125" color="#FFF">
+          {loading ? 'Entrando...' : 'ENTRAR'}
+        </Button>
         <Link to="/signup">Inscrever-se</Link>
       </Form>
     </Container>
