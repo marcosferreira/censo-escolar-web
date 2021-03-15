@@ -13,10 +13,10 @@ function FormResindece(props) {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    event.target.reset();
 
     console.log('enviado!!!');
 
+    event.target.reset();
     props.next();
   };
 

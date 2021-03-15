@@ -51,7 +51,6 @@ export const Label = styled.label`
   color: #bbb;
   font-size: 14px;
   font-weight: normal;
-  z-index: 1;
   pointer-events: none;
 
   position: absolute;

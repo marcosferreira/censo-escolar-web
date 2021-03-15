@@ -14,7 +14,6 @@ function FormPerson(props) {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    event.target.reset();
 
     console.log('enviado!!!');
 
@@ -23,6 +22,7 @@ function FormPerson(props) {
       setRedirectForm(false);
     }
 
+    event.target.reset();
     props.next();
   };
 

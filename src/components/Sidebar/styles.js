@@ -7,7 +7,7 @@ export const Container = styled.div`
 
   background-color: #f2f2f2;
   box-shadow: 1px 1px 10px #444;
-  position: fixed;
+  position: absolute;
   z-index: 4;
   top: 0;
   right: ${(props) => (props.show ? `0` : `-350px`)};
