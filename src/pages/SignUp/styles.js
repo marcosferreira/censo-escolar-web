@@ -32,4 +32,9 @@ export const Container = styled.div`
       box-shadow: 0px 1px 8px #888;
     }
   }
+
+  p {
+    text-align: center;
+    margin: 10px auto;
+  }
 `;
