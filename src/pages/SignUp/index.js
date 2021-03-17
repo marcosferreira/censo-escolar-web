@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Form, InputLabel, Button } from '../../components/Form';
+import { Form, InputLabel, ButtonPrimary } from '../../components/Form';
 
 import { Container } from './styles';
 
@@ -49,9 +49,9 @@ function SignUp() {
         <InputLabel type="text" name="lastname" label="SOBRENOME" required onChange={handleInput} />
         <InputLabel type="text" name="cpf" label="CPF" onKeyUp={handleMaskCPF} required onChange={handleInput} />
         <InputLabel type="password" name="password" label="SENHA" required onChange={handleInput} />
-        <Button backgroundColor="#80C125" color="#FFF">
+        <ButtonPrimary backgroundColor="#80C125" color="#FFF">
           Cadastrar
-        </Button>
+        </ButtonPrimary>
         <Link to="/">Login</Link>
       </Form>
     </Container>

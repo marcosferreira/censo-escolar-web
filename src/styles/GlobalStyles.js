@@ -12,7 +12,7 @@ export default createGlobalStyle`
   body {
     background-color: #2957A3;
     color: #fafafa;
-    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif !important;
   }
 
   /* width */

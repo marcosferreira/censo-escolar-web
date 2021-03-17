@@ -23,6 +23,7 @@ export const Container = styled.div`
     text-decoration: none;
     text-align: center;
     font-size: 14px;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     transition: 0.4s ease all;
 
     &:hover {

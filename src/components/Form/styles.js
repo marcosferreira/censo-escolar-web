@@ -71,23 +71,55 @@ export const Label = styled.label`
   }
 `;
 
-export const Button = styled.button`
+export const ButtonPrimary = styled.button`
   min-width: 150px;
   margin-top: 10px;
   padding: 12px 15px;
-  border: 1px solid ${(props) => props.backgroundColor || `#BBB`};
-  background-color: ${(props) => props.backgroundColor || `inherit`};
-  color: ${(props) => props.color || `#777`};
+  border: 1px solid ${(props) => props.backgroundColor || `#85C228`};
+  background-color: ${(props) => props.backgroundColor || `#85C228`};
+  color: ${(props) => props.color || `#FFF`};
 
   text-transform: uppercase;
   box-shadow: 0px 1px 2px #999;
   transition: 0.4s ease all;
 
+  border-radius: 2px;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+
   &:hover {
     cursor: pointer;
     box-shadow: 0px 1px 4px #888;
-    border: 1px solid #2957A3;
-    background: ${props => props.backgroundColorHover || `#2957A3`};
+    border: 1px solid #7ab225;
+    background: ${props => props.backgroundColorHover || `#7ab225`};
+    color: ${(props) => props.color || `#FFF`};
+  }
+  &:active {
+    box-shadow: 0px 1px 8px #888;
+  }
+`;
+
+export const ButtonSecondary = styled.button`
+  min-width: 150px;
+  margin-top: 10px;
+  padding: 12px 15px;
+  border: 1px solid ${(props) => props.backgroundColor || `#85C228`};
+  background-color: ${(props) => props.backgroundColor || `inherit`};
+  color: ${(props) => props.color || `#85C228`};
+
+  text-transform: uppercase;
+  box-shadow: 0px 1px 2px #999;
+  transition: 0.4s ease all;
+
+  border-radius: 2px;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 1px 4px #888;
+    border: 1px solid #7ab225;
+    background: ${props => props.backgroundColorHover || `#7ab225`};
     color: ${(props) => props.color || `#FFF`};
   }
   &:active {

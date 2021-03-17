@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 import { useForm } from '../../hooks';
-import { Form, InputLabel, Button } from '../../components/Form';
+import { Form, InputLabel, ButtonPrimary } from '../../components/Form';
 import { maskCPF } from '../../Utils';
 
 import { Container } from './styles';
@@ -46,9 +46,9 @@ function SignIn() {
         {message}
         <InputLabel type="text" name="cpf" label="CPF" onKeyUp={handleMaskCPF} onChange={handleChange} required />
         <InputLabel type="password" name="password" onChange={handleChange} label="SENHA" required />
-        <Button backgroundColor="#80C125" color="#FFF">
+        <ButtonPrimary backgroundColor="#80C125" color="#FFF">
           {loading ? 'Entrando...' : 'ENTRAR'}
-        </Button>
+        </ButtonPrimary>
         <Link to="/signup">Inscrever-se</Link>
       </Form>
     </Container>

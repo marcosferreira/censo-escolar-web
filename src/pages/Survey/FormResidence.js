@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { Form, InputLabel, Button } from '../../components/Form';
+import { Form, InputLabel,  ButtonPrimary, ButtonSecondary  } from '../../components/Form';
 import { ButtonGroup } from './styles';
 
 function FormResindece(props) {
@@ -31,10 +31,10 @@ function FormResindece(props) {
       <InputLabel type="text" name="electrical_power_unit" label="Cód. Unidade Elétrica" required />
       <InputLabel type="text" name="number_of_residents" label="Quantidade de moradores" required />
       <ButtonGroup>
-        <Button type="submit">Continuar</Button>
-        <Button type="button" onClick={() => history.push('/home')} >
+        <ButtonPrimary type="submit">Continuar</ButtonPrimary>
+        <ButtonSecondary type="button" onClick={() => history.push('/home')} >
           Cancelar
-        </Button>
+        </ButtonSecondary>
       </ButtonGroup>{' '}
     </Form>
   );

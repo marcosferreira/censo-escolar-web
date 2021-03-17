@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Form, Input, Label, Button } from './styles';
+import { Form, Input, Label, ButtonPrimary, ButtonSecondary } from './styles';
 
 export function InputLabel(props) {
   return (
@@ -11,4 +11,4 @@ export function InputLabel(props) {
   );
 }
 
-export { Form, Input, Label, Button };
+export { Form, Input, Label, ButtonPrimary, ButtonSecondary };

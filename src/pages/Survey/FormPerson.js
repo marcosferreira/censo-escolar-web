@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 
-import { Form, InputLabel, Button } from '../../components/Form';
+import { Form, InputLabel, Button, ButtonPrimary, ButtonSecondary } from '../../components/Form';
 import { ButtonGroup } from './styles';
 
 function FormPerson(props) {
@@ -40,13 +40,13 @@ function FormPerson(props) {
       <InputLabel type="text" name="number_of_residents" label="Quantidade de moradores" required />
 
       <ButtonGroup>
-        <Button type="submit">Salvar e Continuar</Button>
-        <Button type="submit" onClick={() => setRedirectForm(true)}>
+        <ButtonPrimary type="submit">Salvar e Continuar</ButtonPrimary>
+        <ButtonSecondary type="submit" onClick={() => setRedirectForm(true)}>
           Salvar e Concluir
-        </Button>
-        <Button type="submit" onClick={() => history.push('/home')}>
+        </ButtonSecondary>
+        <ButtonSecondary type="submit" onClick={() => history.push('/home')}>
           Cancelar
-        </Button>
+        </ButtonSecondary>
       </ButtonGroup>
     </Form>
   );
