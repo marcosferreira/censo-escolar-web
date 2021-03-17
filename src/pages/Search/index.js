@@ -13,7 +13,7 @@ function Search() {
   }, [query]);
 
   return (
-    <Container visibility={visibility}>
+    <Container visibility={visibility ? '-150px' : '0'}>
       <h1>Procurar Cadastro</h1>
 
       <form>
@@ -32,7 +32,7 @@ function Search() {
         </fieldset>
       </form>
 
-      <PanelResult visibility={visibility}>
+      <PanelResult visibility={visibility ? 'block' : 'none'}>
         <CardPerson>
           <AiOutlineUser size={60} />
           <CardBody>

@@ -11,6 +11,7 @@ export const Container = styled.div`
   justify-content: center;
   gap: 20px;
 
+  margin-top: ${props => props.visibility};
 
   h1 {
     margin-top: 80px;
@@ -63,23 +64,13 @@ export const Container = styled.div`
       }
     }
   }
-
-  ${props => props.visibility ? `
-    h1 {
-      margin-top: -70px;
-      transition: 0.4s all;
-    }
-    form {
-    transition: 0.4s all;
-  }
-  `: null}
 `;
 
 export const PanelResult = styled.div`
   width: 100%;
   max-width: 600px;
   transition: 0.4s all;
-  display: ${props => props.visibility ? `block` : `none`};
+  display: ${props => props.visibility};
 `;
 
 export const CardPerson = styled.div`

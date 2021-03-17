@@ -41,7 +41,7 @@ function SignIn() {
 
   return (
     <Container>
-      <Form onSubmit={handleSubmit(onSubmit)} maxWidth="400px">
+      <Form onSubmit={handleSubmit(onSubmit)} autoComplete="off" maxWidth="400px">
         <img src={logo} alt="logo" />
         {message}
         <InputLabel type="text" name="cpf" label="CPF" onKeyUp={handleMaskCPF} onChange={handleChange} required />
