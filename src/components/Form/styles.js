@@ -47,6 +47,29 @@ export const Input = styled.input`
   }
 `;
 
+export const Select = styled.select`
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: inherit;
+  font-size: 14px;
+
+  display: block;
+  position: relative;
+
+  &:focus {
+    border: 1px solid #999;
+  }
+
+  &:required:valid {
+    outline: none;
+    background-color: inherit;
+    border: 1px solid #757575;
+  }
+`;
+
 export const Label = styled.label`
   color: #bbb;
   font-size: 14px;
@@ -63,7 +86,18 @@ export const Label = styled.label`
     color: #888;
   }
 
-  ${Input}:required:valid ~ & {
+  ${Input}:valid ~ & {
+    top: 4px;
+    font-size: 12px;
+    color: #000;
+    background-color: inherit;
+  }
+
+  ${Select}:focus ~ & {
+    color: #888;
+  }
+
+  ${Select}:valid ~ & {
     top: 4px;
     font-size: 12px;
     color: #000;
@@ -91,7 +125,7 @@ export const ButtonPrimary = styled.button`
     cursor: pointer;
     box-shadow: 0px 1px 4px #888;
     border: 1px solid #7ab225;
-    background: ${props => props.backgroundColorHover || `#7ab225`};
+    background: ${(props) => props.backgroundColorHover || `#7ab225`};
     color: ${(props) => props.color || `#FFF`};
   }
   &:active {
@@ -119,7 +153,7 @@ export const ButtonSecondary = styled.button`
     cursor: pointer;
     box-shadow: 0px 1px 4px #888;
     border: 1px solid #7ab225;
-    background: ${props => props.backgroundColorHover || `#7ab225`};
+    background: ${(props) => props.backgroundColorHover || `#7ab225`};
     color: ${(props) => props.color || `#FFF`};
   }
   &:active {
