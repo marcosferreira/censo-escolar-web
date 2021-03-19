@@ -12,6 +12,10 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
+  form {
+    margin: 20px;
+  }
+
   a {
     min-width: 150px;
     margin-top: 10px;
