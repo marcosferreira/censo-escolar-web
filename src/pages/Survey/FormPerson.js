@@ -28,21 +28,20 @@ function FormPerson(props) {
 
   const isStundet = [
     {
-      id: "0",
-      label: "",
-      value: "",
-      disabled: "true",
-      selected: "true"
-    },{
-      id: "1",
-      label: "Sim",
-      value: "sim",
+      id: '0',
+      label: '',
+      value: '',
     },
     {
-      id: "2",
-      label: "Não",
-      value: "não",
-    }
+      id: '1',
+      label: 'Sim',
+      value: 'sim',
+    },
+    {
+      id: '2',
+      label: 'Não',
+      value: 'não',
+    },
   ];
 
   return (
@@ -52,14 +51,9 @@ function FormPerson(props) {
 
       {/* {console.log(`exibindo formulário ${props.currentStep}`)} */}
 
-      <InputLabel type="text" name="district" label="Bairro/Localidade" autoFocus required />
-      <SelectLabel options={isStundet} name="isStudent" />
-
-
-      {/* <InputLabel type="text" name="address" label="Rua/Logradouro" required />
-      <InputLabel type="text" name="home_num" label="Nº da Residência" required />
-      <InputLabel type="text" name="electrical_power_unit" label="Cód. Unidade Elétrica" required />
-      <InputLabel type="text" name="number_of_residents" label="Quantidade de moradores" required /> */}
+      {/* <InputLabel type="text" name="district" label="Bairro/Localidade" autoFocus required /> */}
+      <h5>Quantas pessoas da moradia não estudam? Exemplifique em qual faixa etária os que não estudam se encaixam:</h5>
+      <InputLabel type="number" name="fx_etaria_2a3" label="2 a 3 anos de idade" required />
 
       <ButtonGroup>
         <ButtonPrimary type="submit">Salvar e Continuar</ButtonPrimary>

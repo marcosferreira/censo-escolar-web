@@ -8,6 +8,8 @@ export function InputLabel(props) {
       <Input
         type={props.type}
         name={props.name}
+        min={props.min}
+        max={props.max}
         onKeyUp={props.onKeyUp}
         onChange={props.onChange}
         autoFocus={props.autoFocus}
@@ -22,16 +24,16 @@ export function InputLabel(props) {
 export function SelectLabel(props) {
   return (
     <fieldset>
-      <Select name={props.name} required >
+      <Select name={props.name} required={props.required} >
         {props.options.map((option) => {
           return (
-            <option key={option.id} value={option.value} disabled={props.disabled} selected={props.selected} >
+            <option key={option.id} value={option.value} >
               {option.label}
             </option>
           );
         })}
       </Select>
-      <Label>Estuda</Label>
+      <Label>{props.label}</Label>
     </fieldset>
   );
 }
