@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 
-import { Form, InputLabel, ButtonPrimary, ButtonSecondary, SelectLabel } from '../../components/Form';
+import { Form, ButtonPrimary, ButtonSecondary, SelectLabel } from '../../components/Form';
 import { ButtonGroup } from './styles';
 
 function FormPerson(props) {

@@ -6,6 +6,7 @@ import SignUp from './SignUp';
 import Home from './Home';
 import Search from './Search';
 import Survey from './Survey';
+import SystemPanel from './SystemPanel';
 
 import Header from '../components/Header';
 
@@ -29,6 +30,7 @@ function Routes() {
       <PrivateRoute exact path="/home" component={Home} />
       <PrivateRoute exact path="/search" component={Search} />
       <PrivateRoute exact path="/survey" component={Survey} />
+      <PrivateRoute exact path="/system-panel" component={SystemPanel} />
     </Switch>
     </BrowserRouter>
   );

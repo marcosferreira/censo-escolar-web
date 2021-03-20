@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import FormResidence from './FormResidence';
-import FormPerson from './FormPerson';
+import React from 'react';
+// import FormResidence from './FormResidence';
+// import FormPerson from './FormPerson';
 
 import { Container } from './styles';
+import { Form } from '../../components/Form';
 
 // function Survey() {
 //   const [currentStep, setCurrentStep] = useState(0);
@@ -21,7 +22,11 @@ import { Container } from './styles';
 // }
 
 function Survey() {
-  return null
+  return <Container>
+    <Form>
+      <input />
+    </Form>
+  </Container>
 }
 
 export default Survey;

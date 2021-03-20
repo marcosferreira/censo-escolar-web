@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { HiOutlineClipboardList, HiOutlineDocumentReport } from 'react-icons/hi';
-import { FiUsers } from 'react-icons/fi';
+import { FiSettings } from 'react-icons/fi';
 
 import { Container } from './styles';
 import { Link } from 'react-router-dom';
@@ -9,18 +9,18 @@ import { Link } from 'react-router-dom';
 function Home() {
   return (
     <Container>
-      <Link to="/search">
-        <p>
-          <AiOutlineSearch size={40} />
-        </p>
-        <p>Procurar Cadastro</p>
-      </Link>
-
       <Link to="/survey">
         <p>
           <HiOutlineClipboardList size={40} />
         </p>
         <p>Iniciar Questionário</p>
+      </Link>
+
+      <Link to="/search">
+        <p>
+          <AiOutlineSearch size={40} />
+        </p>
+        <p>Realizar Pesquisa</p>
       </Link>
 
       <Link to="/home">
@@ -30,11 +30,11 @@ function Home() {
         <p>Visualizar Relatório</p>
       </Link>
 
-      <Link to="/home">
+      <Link to="/system-panel">
         <p>
-          <FiUsers size={40} />
+          <FiSettings size={40} />
         </p>
-        <p>Gerenciar Usuários</p>
+        <p>Gerenciar Sistema</p>
       </Link>
     </Container>
   );
