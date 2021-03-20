@@ -52,8 +52,7 @@ function FormPerson(props) {
       {/* {console.log(`exibindo formulário ${props.currentStep}`)} */}
 
       {/* <InputLabel type="text" name="district" label="Bairro/Localidade" autoFocus required /> */}
-      <h5>Quantas pessoas da moradia não estudam? Exemplifique em qual faixa etária os que não estudam se encaixam:</h5>
-      <InputLabel type="number" name="fx_etaria_2a3" label="2 a 3 anos de idade" required />
+      <SelectLabel name="isStudent" options={isStundet} label="Estudante" required />
 
       <ButtonGroup>
         <ButtonPrimary type="submit">Salvar e Continuar</ButtonPrimary>
