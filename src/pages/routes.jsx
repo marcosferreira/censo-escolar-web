@@ -6,6 +6,7 @@ import SignUp from './SignUp';
 import Home from './Home';
 import Search from './Search';
 import Survey from './Survey';
+import School, { SchoolCreate, SchoolList, SchoolShow } from './School';
 import NotFound from './NotFound';
 
 import Header from '../components/Header';
@@ -24,10 +25,15 @@ function Routes() {
       <Switch>
         <Route exact path="/" component={SignIn} />
         <Route exact path="/signup" component={SignUp} />
-        <Route exact path="/404" component={NotFound} />
         <PrivateRoute exact path="/home" component={Home} />
         <PrivateRoute exact path="/search" component={Search} />
         <PrivateRoute exact path="/survey" component={Survey} />
+        <PrivateRoute exact path="/school" component={School} />
+        <PrivateRoute exact path="/school/create" component={SchoolCreate} />
+        <PrivateRoute exact path="/school/list" component={SchoolList} />
+        <PrivateRoute exact path="/school/:id" component={SchoolShow} />
+
+        <Route exact path="/404" component={NotFound} />
         <Redirect to="/404" />
       </Switch>
     </BrowserRouter>

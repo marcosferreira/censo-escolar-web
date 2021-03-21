@@ -1,30 +1,35 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding: 30px 10px 30px;
+  padding-top: 100px;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 20px;
 
-  text-align: center;
+  a {
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+    background-color: #2c5fb0;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
 
-  h1, h2 {
-    margin-bottom: 5px;
-  }
-`;
-
-export const ButtonGroup = styled.div`
-  display: flex;
-  gap: 20px;
-
-  @media(max-width: 425px) {
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @media(max-width: 320px) {
     gap: 10px;
+  }
+
+  @media(min-width: 1024px) {
+    gap: 50px;
   }
 `;

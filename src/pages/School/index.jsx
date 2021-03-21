@@ -8,7 +8,7 @@ import { Container } from './styles';
 export default function School() {
   return (
     <Container>
-      <Link to="/school">
+      <Link to="/school/create">
         <p>
           <HiOutlineClipboardList size={40} />
         </p>
@@ -19,7 +19,7 @@ export default function School() {
         <p>
           <HiOutlineClipboardList size={40} />
         </p>
-        <p>Listar Escolas</p>
+        <p>Listar todas Escolas</p>
       </Link>
 
     </Container>
