@@ -1,10 +1,12 @@
 import React from 'react';
+
 import { AiOutlineSearch } from 'react-icons/ai';
 import { HiOutlineClipboardList, HiOutlineDocumentReport } from 'react-icons/hi';
-import { FiSettings } from 'react-icons/fi';
+import { IoSchoolOutline } from 'react-icons/io5';
 
 import { Container } from './styles';
 import { Link } from 'react-router-dom';
+
 
 function Home() {
   return (
@@ -30,11 +32,11 @@ function Home() {
         <p>Visualizar Relatório</p>
       </Link>
 
-      <Link to="/system-panel">
+      <Link to="/school">
         <p>
-          <FiSettings size={40} />
+          <IoSchoolOutline size={40} />
         </p>
-        <p>Gerenciar Sistema</p>
+        <p>Gerenciar Escolas</p>
       </Link>
     </Container>
   );

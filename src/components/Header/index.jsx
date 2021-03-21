@@ -39,7 +39,7 @@ export default function Header() {
 
   return (
     <React.Fragment>
-      {location.pathname !== '/' && location.pathname !== '/signup' ? (
+      {location.pathname !== '/' && location.pathname !== '/signup' && location.pathname !== '/404' ? (
         <Container>
           <img src={logo} alt="logo" />
 
