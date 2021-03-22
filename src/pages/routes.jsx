@@ -25,9 +25,11 @@ function Routes() {
       <Switch>
         <Route exact path="/" component={SignIn} />
         <Route exact path="/signup" component={SignUp} />
+
         <PrivateRoute exact path="/home" component={Home} />
         <PrivateRoute exact path="/search" component={Search} />
         <PrivateRoute exact path="/survey" component={Survey} />
+
         <PrivateRoute exact path="/school" component={School} />
         <PrivateRoute exact path="/school/create" component={SchoolCreate} />
         <PrivateRoute exact path="/school/list" component={SchoolList} />
